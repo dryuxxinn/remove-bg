@@ -71,7 +71,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         .brand-icon {
             width: 36px; height: 36px;
@@ -80,16 +80,16 @@
             display: flex; align-items: center; justify-content: center;
             font-weight: 700; font-size: 18px; color: #fff;
         }
-        .brand-text h1 { font-size: 18px; font-weight: 600; letter-spacing: -0.5px; }
+        .brand-text h1 { font-size: 17px; font-weight: 600; letter-spacing: -0.5px; }
         .brand-text p { font-size: 11px; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 1px; font-weight: 500;}
 
         .section-title {
-            font-size: 12px;
+            font-size: 11px;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 1px;
             font-weight: 600;
-            margin: 20px 0 10px;
+            margin: 18px 0 10px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -101,7 +101,7 @@
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--border-glass);
             color: var(--text-main);
-            padding: 12px 16px;
+            padding: 11px 14px;
             border-radius: var(--radius-md);
             font-size: 13px;
             font-weight: 500;
@@ -112,48 +112,77 @@
             cursor: pointer;
             transition: all 0.2s ease;
             font-family: 'Inter', sans-serif;
+            user-select: none;
         }
         .btn:hover { background: rgba(255, 255, 255, 0.08); transform: translateY(-1px); }
-        .btn svg { width: 16px; height: 16px; opacity: 0.7; }
+        .btn svg { width: 16px; height: 16px; opacity: 0.8; }
         
         .btn-primary { background: var(--accent-blue); border-color: transparent; }
         .btn-primary:hover { background: var(--accent-blue-hover); }
         .btn-danger { color: #fca5a5; border-color: rgba(239, 68, 68, 0.3); background: rgba(239, 68, 68, 0.1); }
         .btn-danger:hover { background: rgba(239, 68, 68, 0.2); }
 
-        .slider-group { font-size: 12px; color: var(--text-muted); padding: 10px 0;}
-        input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; margin-top: 8px; }
+        .btn-magic-active {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.25), rgba(59, 130, 246, 0.25)) !important;
+            border-color: var(--accent-cyan) !important;
+            color: #fff !important;
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+        }
+
+        .slider-group { font-size: 12px; color: var(--text-muted); padding: 6px 0;}
+        input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; margin-top: 6px; }
         input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 14px; width: 14px; border-radius: 50%; background: var(--accent-cyan); cursor: pointer; margin-top: -5px; }
         input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 4px; background: rgba(255, 255, 255, 0.1); border-radius: 2px; }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: var(--text-muted);
+            cursor: pointer;
+            margin: 6px 0 10px;
+            user-select: none;
+        }
+        .checkbox-group input[type="checkbox"] {
+            accent-color: var(--accent-cyan);
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+        }
 
         .upload-label {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 18px;
             background: rgba(14, 165, 233, 0.05);
             border: 1.5px dashed rgba(14, 165, 233, 0.4);
             border-radius: var(--radius-md);
             cursor: pointer;
-            transition: 0.3s;
+            transition: all 0.2s ease;
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
-        .upload-label:hover { background: rgba(14, 165, 233, 0.1); border-color: var(--accent-cyan); }
-        .upload-label svg { color: var(--accent-cyan); margin-bottom: 8px; width: 24px; height: 24px; }
+        .upload-label:hover, .upload-label.drag-over { 
+            background: rgba(14, 165, 233, 0.15); 
+            border-color: var(--accent-cyan); 
+            transform: scale(1.01);
+        }
+        .upload-label svg { color: var(--accent-cyan); margin-bottom: 6px; width: 22px; height: 22px; }
         .upload-label span { font-size: 13px; font-weight: 500; color: var(--accent-cyan); }
         input[type="file"] { display: none; }
 
-        /* --- WATERMARK FOOTER (LINKEDIN & PORTO) --- */
+        /* --- WATERMARK FOOTER --- */
         .sidebar-footer {
-            margin-top: 20px;
-            padding-top: 20px;
+            margin-top: 15px;
+            padding-top: 15px;
             border-top: 1px dashed var(--border-glass);
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
         .watermark-text {
             font-size: 11px;
@@ -166,7 +195,7 @@
         }
         .social-buttons {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             width: 100%;
         }
         .social-btn {
@@ -175,7 +204,7 @@
             align-items: center;
             justify-content: center;
             gap: 6px;
-            padding: 8px;
+            padding: 7px;
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--border-glass);
             border-radius: 8px;
@@ -205,6 +234,11 @@
             position: relative;
             overflow: auto;
             padding: 20px;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+        .workspace-area.drag-over {
+            border-color: var(--accent-cyan);
+            background: rgba(6, 182, 212, 0.05);
         }
 
         .checkerboard {
@@ -224,9 +258,10 @@
 
         #resultImage {
             max-width: 100%;
-            max-height: 80vh;
+            max-height: 75vh;
             border-radius: 8px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            object-fit: contain;
         }
 
         .hidden { display: none !important; }
@@ -238,6 +273,7 @@
             flex-direction: column;
             align-items: center;
             gap: 15px;
+            pointer-events: none;
         }
         .empty-state svg { width: 64px; height: 64px; opacity: 0.3; }
 
@@ -261,20 +297,49 @@
             <div class="brand">
                 <div class="brand-icon">AI</div>
                 <div class="brand-text">
-                    <h1>Background and Object Remover</h1>
+                    <h1>Background & Object Remover</h1>
                     <p>bgasrdy</p>
                 </div>
             </div>
 
             <!-- Upload Area -->
-            <label for="imageInput" class="upload-label">
+            <label for="imageInput" class="upload-label" id="uploadDropZone">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
                 <span>Pilih atau Tarik Gambar</span>
-                <span style="font-size: 10px; color: var(--text-muted); margin-top: 4px;">PNG, JPG (Max 20MB)</span>
+                <span style="font-size: 10px; color: var(--text-muted); margin-top: 3px;">PNG, JPG (Max 20MB)</span>
             </label>
-            <input type="file" id="imageInput" accept="image/*" onchange="setupWorkspace()">
+            <input type="file" id="imageInput" accept="image/*" onchange="handleFileSelect(event)">
 
-            <!-- AI Engine Tools -->
+            <!-- 1. Photoshop Magic Eraser (Color-based) -->
+            <div class="section-title">🪄 Photoshop Magic Eraser</div>
+            <button id="toggleMagicEraserBtn" class="btn" onclick="toggleMagicEraserMode()" style="border-color: rgba(6, 182, 212, 0.4); color: #38bdf8;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m19 11-8-8-8.6 8.6a2 2 0 0 0 0 2.8l5.2 5.2c.8.8 2 .8 2.8 0L19 11Z"/><path d="m5 2 5 5"/><path d="M2 13h15"/></svg>
+                <span>Mode Eraser: <b id="magicStatusText" style="color: #ef4444;">OFF</b></span>
+            </button>
+
+            <div class="slider-group">
+                <div style="display: flex; justify-content: space-between;">
+                    <span>Toleransi Warna (Tolerance)</span>
+                    <span id="magicToleranceVal" style="color:#fff; font-weight:bold;">32</span>
+                </div>
+                <input type="range" id="magicToleranceSlider" min="1" max="150" value="32" oninput="document.getElementById('magicToleranceVal').innerText = this.value">
+            </div>
+
+            <label class="checkbox-group">
+                <input type="checkbox" id="magicContiguousCheck" checked>
+                <span>Hanya Area Tersambung (Contiguous)</span>
+            </label>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px;">
+                <button id="undoBtn" class="btn" onclick="undoMagicEraser()" disabled style="margin:0; justify-content:center; opacity: 0.5; font-size: 12px;">
+                    ↶ Undo (Ctrl+Z)
+                </button>
+                <button class="btn btn-primary" onclick="downloadCurrentCanvas()" style="margin:0; justify-content:center; font-size: 12px;">
+                    💾 Unduh
+                </button>
+            </div>
+
+            <!-- 2. AI Engine Tools -->
             <div class="section-title">✨ AI Engine</div>
             <button class="btn btn-primary" onclick="runAPI('remove-bg')">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
@@ -285,8 +350,8 @@
                 Ekstrak Latar Saja
             </button>
 
-            <!-- Manual Editor Tools -->
-            <div class="section-title">🎯 Manual Masking</div>
+            <!-- 3. Manual Masking Tools -->
+            <div class="section-title">🎯 Manual Shape Masking</div>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
                 <button class="btn" onclick="addShape('rect')" style="margin:0; justify-content:center;">+ Kotak</button>
                 <button class="btn" onclick="addShape('circle')" style="margin:0; justify-content:center;">+ Lingkar</button>
@@ -300,24 +365,24 @@
                 <input type="range" id="radiusSlider" min="0" max="100" value="15" oninput="updateRadius(this.value)">
             </div>
 
-            <button class="btn" onclick="deleteSelected()" style="font-size: 12px; color: var(--text-muted); border: none; background: transparent; padding: 5px;">
+            <button class="btn" onclick="deleteSelected()" style="font-size: 12px; color: var(--text-muted); border: none; background: transparent; padding: 4px;">
                 Hapus Bentuk Aktif (Del)
             </button>
 
-            <button class="btn btn-danger" onclick="runShapeEraser()" style="margin-top: 10px;">
+            <button class="btn btn-danger" onclick="runShapeEraser()" style="margin-top: 6px;">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
-                Lubangi Area (Eraser)
+                Lubangi Area Shape
             </button>
 
-            <!-- Spacer biar tombol batal gak dempet -->
+            <!-- Spacer -->
             <div style="flex: 1;"></div>
 
             <!-- Tombol Reset -->
-            <button class="btn" onclick="location.reload()" style="background: transparent; border-style: dashed; margin-top: 20px;">
+            <button class="btn" onclick="resetWorkspace()" style="background: transparent; border-style: dashed; margin-top: 15px;">
                 Batal & Reset Workspace
             </button>
 
-            <!-- WATERMARK LU DISINI -->
+            <!-- WATERMARK FOOTER -->
             <div class="sidebar-footer">
                 <div class="watermark-text">Engineered & Designed by <span>Bergas Ardiansyah</span></div>
                 <div class="social-buttons">
@@ -337,11 +402,17 @@
         <!-- MAIN WORKSPACE -->
         <main class="workspace-area checkerboard" id="mainWorkspace">
             
+            <!-- Magic Eraser Floating Status Indicator -->
+            <div id="magicIndicator" class="hidden" style="position: absolute; top: 20px; background: rgba(15, 23, 42, 0.88); border: 1px solid var(--accent-cyan); backdrop-filter: blur(10px); padding: 8px 16px; border-radius: 30px; font-size: 12px; color: var(--accent-cyan); font-weight: 500; display: flex; align-items: center; gap: 8px; z-index: 20; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+                <span class="spinner" style="width: 14px; height: 14px; border: 2px solid var(--accent-cyan); border-top-color: transparent; border-radius: 50%; display: none;" id="magicMiniSpinner"></span>
+                <span id="magicIndicatorText">🪄 Mode Magic Eraser Aktif: Klik pada warna yang ingin dihapus</span>
+            </div>
+
             <div id="emptyState" class="empty-state">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
                 <div>
                     <h3 style="color: var(--text-main); margin-bottom: 5px; font-weight: 500;">Workspace Kosong</h3>
-                    <p style="font-size: 13px;">Pilih gambar dari panel kiri untuk mulai mengedit.</p>
+                    <p style="font-size: 13px;">Pilih atau tarik gambar dari komputer Anda ke sini untuk mulai mengedit.</p>
                 </div>
             </div>
 
@@ -355,13 +426,18 @@
             </div>
 
             <div id="resultWrapper" class="hidden" style="display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100%;">
-                <img id="resultImage" src="">
-                <a id="downloadLink" href="" download="hasil_aistudio.png" style="text-decoration: none;">
-                    <button class="btn btn-primary" style="width: auto; padding: 12px 40px; border-radius: 30px; box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-                        Unduh Gambar Transparan
+                <img id="resultImage" src="" alt="Hasil Pemrosesan">
+                <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
+                    <a id="downloadLink" href="" download="hasil_aistudio.png" style="text-decoration: none;">
+                        <button class="btn btn-primary" style="width: auto; padding: 12px 30px; border-radius: 30px; box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                            Unduh Gambar Transparan
+                        </button>
+                    </a>
+                    <button class="btn" onclick="showView('canvasWrapper')" style="width: auto; padding: 12px 24px; border-radius: 30px;">
+                        Kembali ke Editor
                     </button>
-                </a>
+                </div>
             </div>
 
         </main>
@@ -369,29 +445,93 @@
 
     <script>
         let currentFile = null;
-        let canvas; 
+        let canvas = null;
+        let previewObjectUrl = null;
+        let resultObjectUrl = null;
+        let isMagicEraserActive = false;
+        let undoStack = []; // Riwayat file untuk fitur Undo
 
         function showView(viewId) {
             ['emptyState', 'canvasWrapper', 'loadingState', 'resultWrapper'].forEach(id => {
-                document.getElementById(id).classList.add('hidden');
+                const el = document.getElementById(id);
+                if (el) el.classList.add('hidden');
             });
-            document.getElementById(viewId).classList.remove('hidden');
+            const target = document.getElementById(viewId);
+            if (target) target.classList.remove('hidden');
         }
 
-        function setupWorkspace() {
-            const file = document.getElementById('imageInput').files[0];
-            if (!file) return;
-            currentFile = file;
-            
-            if (canvas) { canvas.dispose(); }
-            canvas = new fabric.Canvas('mainCanvas', { selection: true });
+        function handleFileSelect(e) {
+            const file = e.target.files && e.target.files[0];
+            if (file) loadFile(file);
+        }
 
-            const imageUrl = URL.createObjectURL(file);
-            fabric.Image.fromURL(imageUrl, function(img) {
+        function loadFile(file) {
+            if (!file.type.startsWith('image/')) {
+                alert("Harap pilih file gambar (JPG, PNG, WebP, dll)!");
+                return;
+            }
+
+            if (file.size > 20 * 1024 * 1024) {
+                alert("Ukuran gambar melebihi batas 20MB!");
+                return;
+            }
+
+            currentFile = file;
+            undoStack = [];
+            updateUndoButton();
+
+            if (previewObjectUrl) {
+                URL.revokeObjectURL(previewObjectUrl);
+            }
+            previewObjectUrl = URL.createObjectURL(file);
+
+            if (canvas) {
+                canvas.dispose();
+                canvas = null;
+            }
+
+            canvas = new fabric.Canvas('mainCanvas', { 
+                selection: true,
+                preserveObjectStacking: true
+            });
+
+            // Pasang event listener sinkronisasi radius bentuk
+            canvas.on('selection:created', checkRadius);
+            canvas.on('selection:updated', checkRadius);
+            canvas.on('selection:cleared', () => {
+                document.getElementById('radiusVal').innerText = document.getElementById('radiusSlider').value;
+            });
+
+            canvas.on('object:scaling', function(e) {
+                const obj = e.target;
+                if (obj && obj.type === 'rect') {
+                    const newWidth = Math.round(obj.width * obj.scaleX);
+                    const newHeight = Math.round(obj.height * obj.scaleY);
+                    obj.set({ width: newWidth, height: newHeight, scaleX: 1, scaleY: 1 });
+                    obj.setCoords();
+                }
+            });
+
+            // Klik canvas untuk mode Photoshop Magic Eraser
+            canvas.on('mouse:down', async function(opt) {
+                if (!isMagicEraserActive || !currentFile) return;
+                const bgImg = canvas.backgroundImage;
+                if (!bgImg) return;
+
+                const pointer = canvas.getPointer(opt.e);
+                const origX = Math.round(pointer.x / bgImg.scaleX);
+                const origY = Math.round(pointer.y / bgImg.scaleY);
+
+                if (origX < 0 || origY < 0 || origX >= bgImg.width || origY >= bgImg.height) return;
+
+                await executeMagicColorEraser(origX, origY);
+            });
+
+            fabric.Image.fromURL(previewObjectUrl, function(img) {
                 const workspace = document.getElementById('mainWorkspace');
-                const padding = 40;
-                const maxWidth = workspace.clientWidth - padding;
-                const maxHeight = workspace.clientHeight - padding;
+                const padding = 60;
+                const maxWidth = Math.max(200, workspace.clientWidth - padding);
+                const maxHeight = Math.max(200, workspace.clientHeight - padding);
 
                 let scale = 1;
                 if (img.width > maxWidth || img.height > maxHeight) {
@@ -404,50 +544,217 @@
                 canvas.setHeight(img.height * scale);
                 
                 canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
-                    scaleX: scale, scaleY: scale
-                });
-                
-                canvas.on('object:scaling', function(e) {
-                    const obj = e.target;
-                    if (obj.type === 'rect') {
-                        const newWidth = obj.width * obj.scaleX;
-                        const newHeight = obj.height * obj.scaleY;
-                        obj.set({ width: newWidth, height: newHeight, scaleX: 1, scaleY: 1 });
-                        obj.setCoords();
-                    }
+                    scaleX: scale,
+                    scaleY: scale
                 });
 
                 showView('canvasWrapper');
                 canvas.calcOffset();
                 canvas.renderAll();
+                updateMagicEraserUI();
             });
         }
 
+        // --- FITUR PHOTOSHOP MAGIC ERASER ---
+        function toggleMagicEraserMode() {
+            if (!currentFile || !canvas) {
+                alert("Pilih atau tarik gambar terlebih dahulu!");
+                return;
+            }
+            isMagicEraserActive = !isMagicEraserActive;
+            updateMagicEraserUI();
+        }
+
+        function updateMagicEraserUI() {
+            const btn = document.getElementById('toggleMagicEraserBtn');
+            const statusText = document.getElementById('magicStatusText');
+            const indicator = document.getElementById('magicIndicator');
+
+            if (isMagicEraserActive) {
+                btn.classList.add('btn-magic-active');
+                statusText.innerText = "AKTIF";
+                statusText.style.color = "#38bdf8";
+                indicator.classList.remove('hidden');
+
+                if (canvas) {
+                    canvas.defaultCursor = 'crosshair';
+                    canvas.hoverCursor = 'crosshair';
+                    canvas.selection = false;
+                    canvas.discardActiveObject();
+                    canvas.getObjects().forEach(obj => {
+                        obj.selectable = false;
+                        obj.evented = false;
+                    });
+                    canvas.renderAll();
+                }
+            } else {
+                btn.classList.remove('btn-magic-active');
+                statusText.innerText = "OFF";
+                statusText.style.color = "#ef4444";
+                indicator.classList.add('hidden');
+
+                if (canvas) {
+                    canvas.defaultCursor = 'default';
+                    canvas.hoverCursor = 'move';
+                    canvas.selection = true;
+                    canvas.getObjects().forEach(obj => {
+                        obj.selectable = true;
+                        obj.evented = true;
+                    });
+                    canvas.renderAll();
+                }
+            }
+        }
+
+        async function executeMagicColorEraser(origX, origY) {
+            const tolerance = document.getElementById('magicToleranceSlider').value;
+            const contiguous = document.getElementById('magicContiguousCheck').checked;
+            const miniSpinner = document.getElementById('magicMiniSpinner');
+            const indicatorText = document.getElementById('magicIndicatorText');
+
+            if (miniSpinner) miniSpinner.style.display = 'inline-block';
+            if (indicatorText) indicatorText.innerText = 'Menghapus warna...';
+
+            const formData = new FormData();
+            formData.append('image', currentFile);
+            formData.append('x', origX);
+            formData.append('y', origY);
+            formData.append('tolerance', tolerance);
+            formData.append('contiguous', contiguous);
+
+            try {
+                const res = await fetch('/magic-color-eraser/', { method: 'POST', body: formData });
+                if (!res.ok) {
+                    const detail = await extractErrorMessage(res);
+                    throw new Error(detail);
+                }
+                const resultBlob = await res.blob();
+
+                // Simpan state sebelum aksi ke undo history
+                undoStack.push(currentFile);
+                updateUndoButton();
+
+                // Update file saat ini
+                currentFile = new File([resultBlob], 'edited_canvas.png', { type: 'image/png' });
+
+                // Perbarui background canvas dengan mulus
+                await updateCanvasBackground(resultBlob);
+            } catch (err) {
+                alert("Gagal menghapus warna: " + err.message);
+            } finally {
+                if (miniSpinner) miniSpinner.style.display = 'none';
+                if (indicatorText) indicatorText.innerText = '🪄 Mode Magic Eraser Aktif: Klik pada warna yang ingin dihapus';
+            }
+        }
+
+        function updateCanvasBackground(blob) {
+            return new Promise((resolve) => {
+                if (!canvas) return resolve();
+                if (previewObjectUrl) URL.revokeObjectURL(previewObjectUrl);
+                previewObjectUrl = URL.createObjectURL(blob);
+
+                fabric.Image.fromURL(previewObjectUrl, function(newImg) {
+                    const bgImg = canvas.backgroundImage;
+                    const scaleX = bgImg ? bgImg.scaleX : 1;
+                    const scaleY = bgImg ? bgImg.scaleY : 1;
+
+                    canvas.setBackgroundImage(newImg, () => {
+                        canvas.renderAll();
+                        resolve();
+                    }, {
+                        scaleX: scaleX,
+                        scaleY: scaleY
+                    });
+                });
+            });
+        }
+
+        async function undoMagicEraser() {
+            if (undoStack.length === 0) return;
+            const prevFile = undoStack.pop();
+            updateUndoButton();
+            currentFile = prevFile;
+            await updateCanvasBackground(prevFile);
+        }
+
+        function updateUndoButton() {
+            const btn = document.getElementById('undoBtn');
+            if (btn) {
+                const hasHistory = undoStack.length > 0;
+                btn.disabled = !hasHistory;
+                btn.style.opacity = hasHistory ? '1' : '0.5';
+                btn.style.cursor = hasHistory ? 'pointer' : 'not-allowed';
+            }
+        }
+
+        function downloadCurrentCanvas() {
+            if (!currentFile) {
+                alert("Belum ada gambar yang dimuat!");
+                return;
+            }
+            const a = document.createElement('a');
+            const url = URL.createObjectURL(currentFile);
+            a.href = url;
+            a.download = 'hasil_magic_eraser.png';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            setTimeout(() => URL.revokeObjectURL(url), 1000);
+        }
+
+        // --- SHAPE MASKING TOOLS ---
         function addShape(type) {
-            if(!canvas) return alert("Pilih atau tarik gambar dulu ke dalam aplikasi!");
+            if (!canvas || !currentFile) {
+                alert("Pilih atau tarik gambar terlebih dahulu!");
+                return;
+            }
+
+            // Jika mode magic eraser sedang aktif, matikan agar bisa mengedit shape
+            if (isMagicEraserActive) {
+                isMagicEraserActive = false;
+                updateMagicEraserUI();
+            }
+            
             let shape;
             const center = canvas.getCenter();
             const commonProps = {
-                left: center.left, top: center.top,
-                fill: 'rgba(239, 68, 68, 0.5)', 
-                originX: 'center', originY: 'center',
-                transparentCorners: false, cornerColor: '#06b6d4', borderColor: '#06b6d4', cornerSize: 12
+                left: center.left,
+                top: center.top,
+                fill: 'rgba(239, 68, 68, 0.55)', 
+                stroke: '#ef4444',
+                strokeWidth: 1.5,
+                originX: 'center',
+                originY: 'center',
+                transparentCorners: false,
+                cornerColor: '#06b6d4',
+                borderColor: '#06b6d4',
+                cornerSize: 12
             };
 
             if (type === 'rect') {
-                const currentRadius = parseInt(document.getElementById('radiusSlider').value);
-                shape = new fabric.Rect({ ...commonProps, width: 200, height: 150, rx: currentRadius, ry: currentRadius });
+                const currentRadius = parseInt(document.getElementById('radiusSlider').value) || 15;
+                shape = new fabric.Rect({ 
+                    ...commonProps, 
+                    width: Math.min(180, canvas.getWidth() * 0.5), 
+                    height: Math.min(130, canvas.getHeight() * 0.5), 
+                    rx: currentRadius, 
+                    ry: currentRadius 
+                });
             } else if (type === 'circle') {
-                shape = new fabric.Circle({ ...commonProps, radius: 80 });
+                shape = new fabric.Circle({ 
+                    ...commonProps, 
+                    radius: Math.min(60, canvas.getWidth() * 0.25) 
+                });
             }
 
             canvas.add(shape);
-            canvas.setActiveObject(shape); 
+            canvas.setActiveObject(shape);
+            canvas.renderAll();
         }
 
         function updateRadius(val) {
             document.getElementById('radiusVal').innerText = val;
-            if(!canvas) return;
+            if (!canvas) return;
             const activeObj = canvas.getActiveObject();
             if (activeObj && activeObj.type === 'rect') {
                 activeObj.set({ rx: parseInt(val), ry: parseInt(val) });
@@ -455,32 +762,78 @@
             }
         }
 
-        canvas?.on('selection:created', checkRadius);
-        canvas?.on('selection:updated', checkRadius);
         function checkRadius(e) {
-            if(e.selected[0] && e.selected[0].type === 'rect') {
-                document.getElementById('radiusSlider').value = e.selected[0].rx || 0;
-                document.getElementById('radiusVal').innerText = e.selected[0].rx || 0;
+            const selected = e.selected && e.selected[0];
+            if (selected && selected.type === 'rect') {
+                const currentR = selected.rx || 0;
+                document.getElementById('radiusSlider').value = currentR;
+                document.getElementById('radiusVal').innerText = currentR;
             }
         }
 
         function deleteSelected() {
-            if(!canvas) return;
+            if (!canvas) return;
             const activeObjects = canvas.getActiveObjects();
-            if (activeObjects.length) {
+            if (activeObjects && activeObjects.length) {
                 canvas.discardActiveObject();
-                activeObjects.forEach(function(object) { canvas.remove(object); });
+                activeObjects.forEach(obj => canvas.remove(obj));
+                canvas.renderAll();
             }
         }
 
+        // Shortcut keyboard
         window.addEventListener('keydown', (e) => {
-            if((e.key === 'Delete' || e.key === 'Backspace') && canvas && canvas.getActiveObjects().length > 0) {
-                deleteSelected();
+            // Shortcut Ctrl+Z atau Cmd+Z untuk Undo
+            if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'z') {
+                if (undoStack.length > 0) {
+                    e.preventDefault();
+                    undoMagicEraser();
+                    return;
+                }
+            }
+
+            // Shortcut Delete & Backspace untuk menghapus shape aktif
+            const isTyping = ['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName);
+            if (!isTyping && (e.key === 'Delete' || e.key === 'Backspace') && canvas) {
+                const active = canvas.getActiveObjects();
+                if (active && active.length > 0) {
+                    e.preventDefault();
+                    deleteSelected();
+                }
             }
         });
 
+        function resetWorkspace() {
+            currentFile = null;
+            undoStack = [];
+            updateUndoButton();
+            isMagicEraserActive = false;
+            updateMagicEraserUI();
+
+            if (previewObjectUrl) {
+                URL.revokeObjectURL(previewObjectUrl);
+                previewObjectUrl = null;
+            }
+            if (resultObjectUrl) {
+                URL.revokeObjectURL(resultObjectUrl);
+                resultObjectUrl = null;
+            }
+            if (canvas) {
+                canvas.dispose();
+                canvas = null;
+            }
+            document.getElementById('imageInput').value = '';
+            document.getElementById('radiusSlider').value = 15;
+            document.getElementById('radiusVal').innerText = '15';
+            document.getElementById('magicToleranceSlider').value = 32;
+            document.getElementById('magicToleranceVal').innerText = '32';
+            showView('emptyState');
+        }
+
         function generateMaskBlob() {
-            return new Promise((resolve) => {
+            return new Promise((resolve, reject) => {
+                if (!canvas) return reject(new Error("Canvas belum siap"));
+                
                 const activeObj = canvas.getActiveObject();
                 canvas.discardActiveObject();
                 
@@ -489,10 +842,10 @@
                 canvas.backgroundColor = 'black';
                 
                 const objs = canvas.getObjects();
-                const originalFills = [];
+                const originalProps = [];
                 objs.forEach(obj => {
-                    originalFills.push(obj.fill);
-                    obj.set('fill', 'white');
+                    originalProps.push({ fill: obj.fill, stroke: obj.stroke });
+                    obj.set({ fill: 'white', stroke: 'white' });
                 });
                 
                 canvas.renderAll();
@@ -500,54 +853,124 @@
                 canvas.getElement().toBlob((blob) => {
                     canvas.backgroundColor = '';
                     canvas.setBackgroundImage(originalBg, canvas.renderAll.bind(canvas));
-                    objs.forEach((obj, i) => obj.set('fill', originalFills[i]));
-                    if (activeObj) { canvas.setActiveObject(activeObj); }
+                    objs.forEach((obj, i) => {
+                        obj.set(originalProps[i]);
+                    });
+                    if (activeObj) { 
+                        canvas.setActiveObject(activeObj); 
+                    }
                     canvas.renderAll();
                     resolve(blob);
                 }, 'image/png');
             });
         }
 
-        async function runShapeEraser() {
-            if(!currentFile) return alert("Upload gambar terlebih dahulu!");
-            showView('loadingState');
-            const maskBlob = await generateMaskBlob();
-            
-            const formData = new FormData();
-            formData.append('image', currentFile);
-            formData.append('mask', maskBlob);
-
+        async function extractErrorMessage(res) {
             try {
+                const data = await res.json();
+                if (data && data.detail) return data.detail;
+            } catch (_) {}
+            return `Status HTTP: ${res.status} ${res.statusText}`;
+        }
+
+        async function runShapeEraser() {
+            if (!currentFile || !canvas) {
+                alert("Upload gambar terlebih dahulu!");
+                return;
+            }
+
+            const shapes = canvas.getObjects();
+            if (shapes.length === 0) {
+                alert("Tambahkan minimal 1 bentuk (Kotak atau Lingkaran) pada area yang ingin dilubangi!");
+                return;
+            }
+
+            showView('loadingState');
+            try {
+                const maskBlob = await generateMaskBlob();
+                const formData = new FormData();
+                formData.append('image', currentFile);
+                formData.append('mask', maskBlob);
+
                 const res = await fetch('/magic-eraser/', { method: 'POST', body: formData });
-                if(!res.ok) throw new Error("Gagal");
-                displayResult(await res.blob());
-            } catch (e) { 
-                alert("Server error! Pastikan backend berjalan aman."); 
-                showView('canvasWrapper'); 
+                if (!res.ok) {
+                    const detail = await extractErrorMessage(res);
+                    throw new Error(detail);
+                }
+                const resultBlob = await res.blob();
+                displayResult(resultBlob);
+            } catch (err) {
+                alert("Gagal melubangi area: " + err.message);
+                showView('canvasWrapper');
             }
         }
 
         async function runAPI(endpoint) {
-            if(!currentFile) return alert("Upload gambar terlebih dahulu!");
+            if (!currentFile) {
+                alert("Upload gambar terlebih dahulu!");
+                return;
+            }
+
             showView('loadingState');
             const formData = new FormData();
             formData.append('file', currentFile);
+
             try {
                 const res = await fetch(`/${endpoint}/`, { method: 'POST', body: formData });
-                if(!res.ok) throw new Error("Gagal");
-                displayResult(await res.blob());
-            } catch (e) { 
-                alert("Server error!"); 
-                showView('canvasWrapper'); 
+                if (!res.ok) {
+                    const detail = await extractErrorMessage(res);
+                    throw new Error(detail);
+                }
+                const resultBlob = await res.blob();
+                displayResult(resultBlob);
+            } catch (err) {
+                alert("Gagal memproses gambar: " + err.message);
+                showView(canvas ? 'canvasWrapper' : 'emptyState');
             }
         }
 
         function displayResult(blob) {
-            const url = URL.createObjectURL(blob);
-            document.getElementById('resultImage').src = url;
-            document.getElementById('downloadLink').href = url;
+            if (resultObjectUrl) {
+                URL.revokeObjectURL(resultObjectUrl);
+            }
+            resultObjectUrl = URL.createObjectURL(blob);
+            document.getElementById('resultImage').src = resultObjectUrl;
+            document.getElementById('downloadLink').href = resultObjectUrl;
             showView('resultWrapper');
         }
+
+        // --- DRAG & DROP SUPPORT ---
+        const dropZones = [document.getElementById('uploadDropZone'), document.getElementById('mainWorkspace')];
+
+        dropZones.forEach(zone => {
+            if (!zone) return;
+            ['dragenter', 'dragover'].forEach(eventName => {
+                zone.addEventListener(eventName, (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    zone.classList.add('drag-over');
+                });
+            });
+
+            ['dragleave', 'drop'].forEach(eventName => {
+                zone.addEventListener(eventName, (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    zone.classList.remove('drag-over');
+                });
+            });
+
+            zone.addEventListener('drop', (e) => {
+                const dt = e.dataTransfer;
+                const files = dt && dt.files;
+                if (files && files.length > 0) {
+                    loadFile(files[0]);
+                }
+            });
+        });
+
+        window.addEventListener('dragover', (e) => e.preventDefault(), false);
+        window.addEventListener('drop', (e) => e.preventDefault(), false);
     </script>
 </body>
 </html>
